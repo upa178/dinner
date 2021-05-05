@@ -1,0 +1,76 @@
+@import "reset";
+@import "mixin";
+
+.header {
+    background-color: $header;
+    height: 50px;
+    position: relative;
+
+    & .user {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    & .top-button {
+        position: absolute;
+        top: 50%;
+        left: 95%;
+        transform: translate(-50%, -50%);
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.modal {
+    width: 150px;
+    height: 400px;
+    position: fixed;
+    top: 0px;
+    left: -150px;
+    background-color: $header;
+    z-index: 2;
+    
+
+    & .modal-user {
+        margin: 10px 0px 20px 10px;
+        cursor: pointer;
+    }
+    
+    & .user-name {
+        margin-bottom: 50px;
+        margin-left: 10px;
+    }
+
+    & .modal-button {
+        position: relative;
+        display: block;
+        margin-bottom: 30px;
+        margin-left: 20px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0%;
+            width: 10%;
+            height: 1px;
+            background: black;
+            transition: all 0.3s;
+            transform: scale(1, 1);
+            transform-origin: left;
+        }
+
+        &:hover::after {
+            transform: scale(6, 1);
+        }
+    }
+}

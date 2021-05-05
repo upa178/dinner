@@ -1,0 +1,42 @@
+@import "reset";
+@import "mixin";
+
+body, html {
+    height: 100%;
+
+    & .list-wrp {
+        width: 80%;
+        height: 40%;
+        background-color: $background;
+        margin: 0 auto;
+        margin-top: 40px;
+        position: relative;
+
+        & .list {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            & .listname {
+                width: 100%;
+                height: 15%;
+                background-color: white;
+                margin-bottom: 3%;
+            }
+        
+            & .listrecipe {
+                width: 100%;
+                height: 75%;
+                background-color: white;
+            }
+
+        }
+
+        
+    }
+
+
+}

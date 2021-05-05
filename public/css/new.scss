@@ -1,0 +1,49 @@
+@import "reset";
+@import "mixin";
+
+
+.login-new-wrp {
+    width: 70%;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: solid 1px $background;
+    position: relative;
+    box-shadow: 2px 2px 4px;
+
+    & .login {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        width: 100%;
+
+        & .login-info {
+            margin: 0 auto;
+            display: block;
+            margin-top: 40px;
+            border-bottom: solid 1px $background;
+            width: 80%;
+            text-align: left;
+            padding: 5px 5px;
+        }
+
+        & .login-button {
+            @include button;
+            margin-top: 60px;
+        }
+
+        & .errors {
+            @include errors;
+
+            & .error-mark {
+                @include error-mark;
+            }
+
+            & .error {
+                @include error;
+            }
+        }
+    }
+}

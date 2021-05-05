@@ -1,0 +1,35 @@
+@mixin button {
+    color: white;
+    background-color: $button;
+    padding: 10px 60px;
+    margin: 10px 0px 20px 0px;
+    width: 200px;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+@mixin errors {
+    border-style: solid 1px;
+    border-width: 1px;
+    border-color: #FA3932;
+    background-color: $error;
+    color: #FA3932;
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+@mixin error-mark {
+    color: #FA3932;
+    display: inline-block;
+}
+
+@mixin error {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+

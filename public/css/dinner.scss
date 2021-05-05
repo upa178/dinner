@@ -1,0 +1,31 @@
+@import "reset";
+@import "mixin";
+
+.dinner-wrp {
+    background-color: $background;
+    padding: 20px 0px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    & .dinner-commit {
+        width: 80%;
+        margin: 0 auto;
+
+
+        & .dinner-info {
+            display: block;
+            background-color: white;
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            padding: 5px 5px;
+        }
+
+        & .dinner-button {
+            @include button;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
